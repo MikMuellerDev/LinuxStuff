@@ -1,12 +1,7 @@
-# LinuxStuff
-## This repository contains some scripts that make setting up linux easier.
-Make shure to follow the instructions!
-
+# Open VPyN Client
 ## Info
-You can also visit my website for more useless information.
-```
-https://openvpn.net/
-```
+Openvpn doesn't provide a linux client with GUI, so here is such thing done in python.
+
 
 ## Install
 1. rename "[demo]profile.ovpn to "profile.ovpn"
