@@ -21,7 +21,7 @@ def connection():
 def window(height=400, width=300):
     # Window properties
     root = tk.Tk()
-    root.title("Open VPN client GUI VERSION 1.2")
+    root.title("VPN")
     root.resizable(False, False)
     root.tk.call('wm', 'iconphoto', root._w, tk.PhotoImage(file='icon.png'))
     ttk.Style().theme_use('clam')
