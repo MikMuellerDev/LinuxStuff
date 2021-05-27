@@ -5,7 +5,7 @@ import os
 import threading
 import requests
 import time
-from SECRETS import sudo_passwd
+from SECRETSDEMO import sudo_passwd
 
 active = False
 
@@ -15,7 +15,7 @@ def disconnection():
 
 
 def connection():
-    os.system("echo " + sudo_passwd + " | sudo -S openvpn --config profile.ovpn")
+    os.system("echo " + sudo_passwd + " | sudo -S openvpn --config *.ovpn")
 
 
 def window(height=400, width=300):
