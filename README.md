@@ -1,5 +1,5 @@
 # LinuxStuff
-## This repository contains some scripts for making setting up and using linux easier.
+## This repository contains some scripts that make setting up linux easier.
 Make shure to follow the instructions.
 
 ## Info
