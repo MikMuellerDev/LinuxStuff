@@ -1,5 +1,5 @@
 # Open VPyN Client
-##Info
+## Info
 Openvpn doesn't provide a linux client with GUI, so here is such thing done in python.
 
 
