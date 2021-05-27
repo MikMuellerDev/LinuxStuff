@@ -12,6 +12,7 @@ https://openvpn.net/
 1. rename "[demo]SECRETS.py" to "SECRETS.py"
 2. rename "[demo]profile.ovpn to "profile.ovpn"
 3. install the dependencies with pip3.
-```
-https://openvpn.net/
-```
+
+```sudo apt install python3 python3-pip python-tk python3-tk```
+``pip3 install requests``
+```git clone sssss && cd sss```
