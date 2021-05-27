@@ -13,6 +13,14 @@ https://openvpn.net/
 2. rename "[demo]profile.ovpn to "profile.ovpn"
 3. install the dependencies with pip3.
 
-```sudo apt install python3 python3-pip python-tk python3-tk```
-``pip3 install requests``
-```git clone sssss && cd sss```
+````
+sudo apt install python3 python3-pip python-tk python3-tk
+````
+
+````
+pip3 install requests
+````
+
+````
+git clone https://github.com/MikMuellerDev/LinuxStuff && cd LinuxStuff/OpenVPyN/ && python3 main.py
+````
