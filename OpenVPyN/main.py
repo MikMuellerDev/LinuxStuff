@@ -6,7 +6,7 @@ import os
 import threading
 import requests
 import time
-sudo_passwd = input("Enter your sudo-password.\n")
+from SECRETSDEMO import sudo_passwd
 
 
 # disconnects
