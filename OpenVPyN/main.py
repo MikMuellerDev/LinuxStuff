@@ -8,14 +8,14 @@ import requests
 import time
 from SECRETSDEMO import sudo_passwd
 
-active = False
 
-
-def disconnection():
+# disconnects
+def disconnecting():
     os.system("echo " + sudo_passwd + " | sudo -S pkill openvpn")
 
 
-def connection():
+# connects to the actual vpn
+def connecting():
     os.system("echo " + sudo_passwd + " | sudo -S openvpn --config *.ovpn")
 
 
@@ -32,26 +32,27 @@ def window(height=400, width=300):
     canvas.pack()
     frame = tk.Frame(root, bd=15)
     frame.place(relheight=1, relwidth=1)
-    padx = 15
-    pady = 10
-    outputtext = Text(frame, bg="#424242", width=37, height=10)
-    outputtext.grid(column=1, row=3, padx=1, pady=1)
+    pad_x = 15
+    pad_y = 10
+
+    output = Text(frame, bg="#424242", width=37, height=10)
+    output.grid(column=1, row=3, padx=1, pady=1)
 
     pmt = ttk.Button(frame, text="Connect", command=lambda: threading.Thread(target=connect).start())
-    pmt.grid(column=1, row=1, padx=padx, pady=pady)
+    pmt.grid(column=1, row=1, padx=pad_x, pady=pad_y)
 
     prt = ttk.Button(frame, text="Disconnect", command=lambda: threading.Thread(target=disconnect).start())
-    prt.grid(column=1, row=2, padx=padx, pady=pady)
+    prt.grid(column=1, row=2, padx=pad_x, pady=pad_y)
 
     def println(input_):
-        outputtext.delete(1.0, 'end-1c')
-        outputtext.insert(index=1.0, chars=input_)
+        output.delete(1.0, 'end-1c')
+        output.insert(index=1.0, chars=input_)
 
     def connect():
         if ping_google():
             ip_before = requests.get("https://ipinfo.io/ip").text
             println("Connecting...")
-            threading.Thread(target=connection).start()
+            threading.Thread(target=connecting).start()
             time.sleep(2)
             while not ping_google():
                 time.sleep(2)
@@ -70,7 +71,7 @@ def window(height=400, width=300):
             ip_before = requests.get("https://ipinfo.io/ip").text
             println("Disconnecting...")
             for j in range(2):
-                threading.Thread(target=disconnection).start()
+                threading.Thread(target=disconnecting).start()
             time.sleep(2)
             while not ping_google():
                 time.sleep(2)
@@ -101,12 +102,10 @@ def window(height=400, width=300):
     if ping_google():
         println("Current IP: " + requests.get("https://ipinfo.io/ip").text)
     else:
-        disconnection()
+        disconnecting()
 
     root.mainloop()
 
 
 window()
-for i in range(2):
-    disconnection()
-time.sleep(1)
+disconnecting()
