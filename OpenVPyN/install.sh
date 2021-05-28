@@ -1,20 +1,28 @@
 #!/bin/bash
 sudo apt install python3 python3-pip python-tk python3-tk openvpn
 sudo pip3 install requests
-cd /etc/
-sudo mkdir OpenVPyN
+# shellcheck disable=SC2164
+cd /home/$USER/
 git clone https://github.com/MikMuellerDev/LinuxStuff
 # shellcheck disable=SC2164
 cd LinuxStuff/
 sudo rm -R .git
-sudo rm -R .gitignore
-sudo rm -R README.md
+rm -R .gitignore
+rm -R README.md
 # shellcheck disable=SC2164
 cd OpenVPyN/
 chmod +x main.py
-sudo rm .gitignore
-sudo rm README.md
-sudo chmod +x OpenVpn.desktop
+chmod +x OpenVpn.desktop
+rm .gitignore
+rm README.md
+sudo mkdir /etc/OpenVPyN/
+sudo mv launch.sh /etc/OpenVPyN/
+sudo chmod +x /etc/OpenVPyN/launch.sh
+sudo cp icon.png /etc/OpenVPyN
+# set desktop icon
 cp OpenVpn.desktop /home/$USER/Desktop/
-sudo chmod +x main.py
+# shellcheck disable=SC2164
+cd /home/$USER/Desktop/
+chmod +x OpenVpn.desktop
+echo 'created desktop shortcut'
 echo "Installed OpenVPyN."
