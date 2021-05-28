@@ -8,14 +8,6 @@ import requests
 import time
 from SECRETSDEMO import sudo_passwd
 
-try:
-    with open("*.ovpn") as file:
-        print("Open VPN File detected.")
-except Exception as e:
-    print(e)
-    print("\n"*10)
-    print("Make sure to include your openvpn profile file in this directory.")
-
 
 # disconnects
 def disconnecting():
@@ -111,6 +103,13 @@ def window(height=400, width=300):
         println("Current IP: " + requests.get("https://ipinfo.io/ip").text)
     else:
         disconnecting()
+
+    try:
+        with open("*.ovpn") as file:
+            print("Open VPN File detected.")
+    except Exception as e:
+        println(str(e))
+        println("Make sure to include your openvpn profile file in this directory.")
 
     root.mainloop()
 
