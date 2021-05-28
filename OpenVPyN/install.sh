@@ -14,4 +14,3 @@ sudo rm .gitignore
 sudo rm README.md
 echo "Installed OpenVPyN."
 sudo chmod +x main.py
-nohup ./main.py
