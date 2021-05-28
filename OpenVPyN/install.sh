@@ -12,5 +12,7 @@ cd OpenVPyN/
 chmod +x main.py
 sudo rm .gitignore
 sudo rm README.md
-echo "Installed OpenVPyN."
+sudo chmod +x OpenVpn.desktop
+cp OpenVpn.desktop /home/$USER/Desktop/
 sudo chmod +x main.py
+echo "Installed OpenVPyN."
