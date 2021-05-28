@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Open Vpn
+GenericName=Open vpn
+GenericName[de]=Connect to Openvpn
+Exec=bash /usr/bin/OpenVPyN/launch.sh
+Icon=/usr/bin/OpenVPyN/icon.png
+Terminal=true
+Type=Application
+StartupNotify=false
+Categories=Development;
+
