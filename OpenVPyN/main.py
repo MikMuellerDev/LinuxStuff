@@ -109,7 +109,7 @@ def window(height=400, width=300):
             print("Open VPN File detected.")
     except Exception as e:
         println(str(e))
-        println("Make sure to include your openvpn profile file in this directory.")
+        println("Make sure to include your openvpn    profile file in this directory.")
 
     root.mainloop()
 
