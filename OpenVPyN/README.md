@@ -9,5 +9,5 @@ Openvpn doesn't provide a linux client with GUI, so here is such thing done in p
 4. If you choose your own .ovpn file, make sure to remove "PROFILETEST.ovpn".
 
 ````
-wget -o- https://raw.githubusercontent.com/MikMuellerDev/LinuxStuff/main/OpenVPyN/install.sh | bash
+wget -O- https://raw.githubusercontent.com/MikMuellerDev/LinuxStuff/main/OpenVPyN/install.sh | bash
 ````
