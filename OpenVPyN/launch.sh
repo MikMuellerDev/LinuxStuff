@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /etc/OpenVPyN/
+cd /home/$USER/OpenVPyN/
 /usr/bin/python3 main.py
