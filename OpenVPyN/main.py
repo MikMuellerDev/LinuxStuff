@@ -8,6 +8,14 @@ import requests
 import time
 from SECRETSDEMO import sudo_passwd
 
+try:
+    with open("*.ovpn") as file:
+        print("Open VPN File detected.")
+except Exception as e:
+    print(e)
+    print("\n"*10)
+    print("Make sure to include your openvpn profile file in this directory.")
+
 
 # disconnects
 def disconnecting():

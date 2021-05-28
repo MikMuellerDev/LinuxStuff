@@ -6,4 +6,14 @@ git clone https://github.com/MikMuellerDev/LinuxStuff
 cd LinuxStuff/OpenVPyN/
 chmod +x main.py
 pyinstaller main.py --onedir
-
+sudo rm -R __pycache__
+sudo rm -R build
+sudo rm .gitignore
+sudo rm main.spec
+sudo rm README.md
+sudo mv dist/main ./
+sudo rm -R dist
+sudo mv icon.png main/
+sudo mv SECRETSDEMO.py main/
+sudo rm main.py
+sudo rm install.sh
