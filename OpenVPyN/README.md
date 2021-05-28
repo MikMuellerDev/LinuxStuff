@@ -18,5 +18,5 @@ pip3 install requests
 ````
 
 ````
-git clone https://github.com/MikMuellerDev/LinuxStuff && cd LinuxStuff/OpenVPyN/ && chmod +x main.py && ./main.py
+git clone https://github.com/MikMuellerDev/LinuxStuff && cd LinuxStuff/OpenVPyN/ && chmod +x main.py && nohup ./main.py
 ````
