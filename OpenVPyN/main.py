@@ -105,8 +105,8 @@ def window(height=400, width=300):
         disconnecting()
 
     try:
-        with open("*.ovpn") as file:
-            print("Open VPN File detected.")
+        with open("profile.ovpn", "r") as file:
+            println("Open VPN File detected.")
     except Exception as e:
         println(str(e))
         println("Make sure to include your openvpn    profile file in this directory.")
