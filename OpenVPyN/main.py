@@ -98,18 +98,17 @@ def window(height=400, width=300):
             return False
 
     # Start Window
-
-    if ping_google():
-        println("Current IP: " + requests.get("https://ipinfo.io/ip").text)
-    else:
-        disconnecting()
-
     try:
         with open("profile.ovpn", "r") as file:
             println("Open VPN File detected.")
     except Exception as e:
         println(str(e))
         println("Make sure to include your openvpn    profile file in this directory.")
+
+    if ping_google():
+        println("Current IP: " + requests.get("https://ipinfo.io/ip").text)
+    else:
+        disconnecting()
 
     root.mainloop()
 
