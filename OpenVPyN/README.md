@@ -18,6 +18,5 @@ pip3 install requests
 ````
 
 ````
-git clone https://github.com/MikMuellerDev/LinuxStuff && cd LinuxStuff/OpenVPyN/ && chmod +x main.py && nohup ./main.py &&
-echo 'You can close the nerminal now.'
+git clone https://github.com/MikMuellerDev/LinuxStuff && cd LinuxStuff/OpenVPyN/ && chmod +x main.py && nohup ./main.py
 ````
