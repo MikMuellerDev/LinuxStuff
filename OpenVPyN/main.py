@@ -52,9 +52,9 @@ def window(height=400, width=300):
             ip_before = requests.get("https://ipinfo.io/ip").text
             println("Connecting...")
             threading.Thread(target=connection).start()
-            time.sleep(1)
+            time.sleep(2)
             while not ping_google():
-                time.sleep(1)
+                time.sleep(2)
             ip_after = requests.get("https://ipinfo.io/ip").text
             if ping_google():
                 if ip_after is not ip_before:
@@ -71,9 +71,9 @@ def window(height=400, width=300):
             println("Disconnecting...")
             for j in range(2):
                 threading.Thread(target=disconnection).start()
-            time.sleep(1)
+            time.sleep(2)
             while not ping_google():
-                time.sleep(1)
+                time.sleep(2)
             ip_after = requests.get("https://ipinfo.io/ip").text
             if ping_google():
                 if ip_after is not ip_before:
