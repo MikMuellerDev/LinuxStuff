@@ -60,8 +60,10 @@ def window(height=400, width=300):
             if ping_google():
                 if ip_after is not ip_before:
                     println("Successfully connected.")
+                    print("Successfully connected")
                 else:
                     println("Error, your IP did not change.")
+                    print("Error, your IP did not change.")
             else:
                 println("Connection Error.")
             println("Current IP: " + requests.get("https://ipinfo.io/ip").text)
@@ -70,6 +72,7 @@ def window(height=400, width=300):
         if ping_google():
             ip_before = requests.get("https://ipinfo.io/ip").text
             println("Disconnecting...")
+            print("Disconnecting")
             for j in range(2):
                 threading.Thread(target=disconnecting).start()
             time.sleep(2)
@@ -79,10 +82,13 @@ def window(height=400, width=300):
             if ping_google():
                 if ip_after is not ip_before:
                     println("Successfully disconnected.")
+                    print("Successfully disconnected")
                 else:
                     println("Error, your IP did not change.")
+                    print("Error, your IP did not change.")
             else:
                 println("Connection Error")
+                print("Connection Error")
             println("Current IP: " + requests.get("https://ipinfo.io/ip").text)
 
     def ping_google():
@@ -100,14 +106,21 @@ def window(height=400, width=300):
     # Start Window
     try:
         with open("profile.ovpn", "r") as file:
-            println("Open VPN File detected.")
+            println("Open VPN file detected.")
+            print("Open VPN file detected.")
             if ping_google():
                 println("Current IP: " + requests.get("https://ipinfo.io/ip").text)
+                print("OpenVPyN V.1.9 by Mik Mueller\n"
+                      "Visit my Github and contribute at:\n"
+                      "https://github.com/MikMuellerDev/")
             else:
                 disconnecting()
+                print("Connection Error, cannot reach google.de")
+                println("Connection Error, cannot reach google.de")
     except Exception as e:
         println(str(e))
         println("Make sure to include your openvpn    profile file in this directory.     /home/$USER/LinuxStuff/OpenVPyN")
+        print("Make sure to include your openvpn profile file in this directory:\n/home/$USER/LinuxStuff/OpenVPyN")
 
     root.mainloop()
 
