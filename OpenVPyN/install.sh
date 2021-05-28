@@ -11,6 +11,7 @@ rm -R README.md
 # shellcheck disable=SC2164
 cd OpenVPyN/
 chmod +x main.py
+chmod +x remove.sh
 chmod +x OpenVpn.desktop
 rm .gitignore
 rm README.md
