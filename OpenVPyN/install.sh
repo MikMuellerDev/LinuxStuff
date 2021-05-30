@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install python3 python3-pip python-tk python3-tk openvpn
+sudo apt install python3 python3-pip python-tk python3-tk openvpn -y
 sudo pip3 install requests
 cd /home/$USER/
 git clone https://github.com/MikMuellerDev/LinuxStuff
