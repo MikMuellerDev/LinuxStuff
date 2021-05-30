@@ -1,4 +1,4 @@
-# UsefulToolsInstaller
+# Basic Configuration Installer
 ## Info
 This script installs everything you need in order to get going on Linux (Kubuntu)
 
