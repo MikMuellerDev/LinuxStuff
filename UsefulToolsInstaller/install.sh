@@ -8,10 +8,10 @@ fi
 
 apt update
 apt upgrade -y
-apt install sudo vim neofetch fish htop curl xclip git openjdk-11-jdk python3.9 python3-pip python3-tk lolcat wget cmatrix fortune cowsay tmux openjfxsnapd wine figlet tree -y || exit 1
+apt install sudo vim neofetch fish htop curl xclip git openjdk-11-jdk python3.9 python3-pip python3-tk lolcat wget cmatrix fortune cowsay tmux openjfxsnapd speedtest-cli wine figlet tree -y || exit 1
 
-# Install bpytop
-pip3 install bpytop --upgrade
+
+pip3 install bpytop openpyxl requests apscheduler --upgrade
 
 # Install bat
 curl -L -o ~/bat_0.18.0_amd64.deb https://github.com/sharkdp/bat/releases/download/v0.18.0/bat_0.18.0_amd64.deb
