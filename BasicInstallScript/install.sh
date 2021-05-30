@@ -8,7 +8,7 @@ fi
 
 apt update
 apt upgrade -y
-apt install sudo vim neofetch fish htop curl xclip git openjdk-11-jdk python3.9 python3-pip python3-tk lolcat wget cmatrix fortune cowsay tmux openjfxsnapd speedtest-cli wine figlet tree -y || exit 1
+apt install sudo vim neofetch fish htop curl xclip git openjdk-11-jdk python3.9 python3-pip python3-tk lolcat wget cmatrix fortune cowsay tmux openjfx snapd speedtest-cli wine figlet tree -y || exit 1
 
 pip3 install bpytop openpyxl requests apscheduler --upgrade
 
