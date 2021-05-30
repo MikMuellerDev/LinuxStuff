@@ -1,3 +1,6 @@
+# FishConfigurator
+## Info
+This install fish and configures its setting to my preferences.
 
 ## Install
 1. Execute the script as root.
