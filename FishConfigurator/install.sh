@@ -19,8 +19,6 @@ getent passwd | while IFS=: read -r name _ uid _ _ home shell; do
 
       # set fish as the default
       chsh -s /bin/fish
-
-      # set up fish config
     fi
   fi
 done

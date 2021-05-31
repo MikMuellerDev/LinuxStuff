@@ -56,6 +56,7 @@ def window(height=400, width=300):
             time.sleep(2)
             while not ping_google():
                 time.sleep(2)
+            println("Google pinged.")
             ip_after = requests.get("https://ipinfo.io/ip").text
             if ping_google():
                 if ip_after is not ip_before:
@@ -78,6 +79,7 @@ def window(height=400, width=300):
             time.sleep(2)
             while not ping_google():
                 time.sleep(2)
+            println("Google pinged.")
             ip_after = requests.get("https://ipinfo.io/ip").text
             if ping_google():
                 if ip_after is not ip_before:
@@ -94,8 +96,8 @@ def window(height=400, width=300):
     def ping_google():
         try:
             response = requests.get("https://www.google.de/").status_code
-        except Exception as e:
-            print(e)
+        except Exception as b:
+            print(b)
             println("No internet connection!")
             return False
         if response == 200:
@@ -119,7 +121,8 @@ def window(height=400, width=300):
                 println("Connection Error, cannot reach google.de")
     except Exception as e:
         println(str(e))
-        println("Make sure to include your openvpn    profile file in this directory.     /home/$USER/LinuxStuff/OpenVPyN")
+        println("Make sure to include your openvpn    profile file in this directory."
+                "     /home/$USER/LinuxStuff/OpenVPyN")
         print("Make sure to include your openvpn profile file in this directory:\n/home/$USER/LinuxStuff/OpenVPyN")
 
     root.mainloop()
