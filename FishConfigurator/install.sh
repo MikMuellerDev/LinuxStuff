@@ -5,20 +5,22 @@ if [ "$EUID" -ne 0 ]; then
   exit 2
 fi
 
+apt-add-repository ppa:fish-shell/release-3
 apt update
 apt upgrade -y
-apt install fish
+apt install fish -y
 
 
 # execute per user on the target system
 getent passwd | while IFS=: read -r name _ uid _ _ home shell; do
   if [ -d "$home" ] && [ "$(stat -c %u "$home")" = "$uid" ]; then
-    if [ -n "$shell" ] && [ "$shell" != "/bin/false" ] && [ "$shell" != "/usr/sbin/nologin" ]; then
+    if [ -n "$shell" ] && [ "$shell" != "/bin/false" ] && [ "$shell" != "/usr/sbin/nologin" ] && [ "$shell" != "/usr/bin/nologin" ] && { [ "$uid" -eq 0 ] || [ "$uid" -ge 1000 ]; }; then
       # add fish to shells
-      echo /bin/fish | sudo tee -a /etc/shells
+      # echo /bin/fish | sudo tee -a /etc/shells
+      # Will already be added there during installation
 
       # set fish as the default
-      chsh -s /bin/fish
+      chsh -s /bin/fish "$name"
     fi
   fi
 done
