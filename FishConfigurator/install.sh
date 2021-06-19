@@ -26,7 +26,7 @@ getent passwd | while IFS=: read -r name _ uid _ _ home shell; do
 done
 
 echo "alias ll='ls -l'" >> "/etc/fish/config.fish"
-echo "alias update='sudo apt update && sudo apt upgrade'" >> "/etc/fish/config.fish"
+echo "alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'" >> "/etc/fish/config.fish"
 echo "alias btop='bpytop'" >> "/etc/fish/config.fish"
 echo "alias bashtop='bpytop'" >> "/etc/fish/config.fish"
 echo "alias sss='ssh cloud'" >> "/etc/fish/config.fish"
