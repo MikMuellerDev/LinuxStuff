@@ -26,12 +26,13 @@ getent passwd | while IFS=: read -r name _ uid _ _ home shell; do
 done
 
 echo "alias ll='ls -l'" >> "/etc/fish/config.fish"
+echo "alias l='ls -l'" >> "/etc/fish/config.fish"
+echo "alias cl='clear'" >> "/etc/fish/config.fish"
 echo "alias update='sudo apt update && sudo apt upgrade && sudo apt autoremove'" >> "/etc/fish/config.fish"
 echo "alias btop='bpytop'" >> "/etc/fish/config.fish"
 echo "alias bashtop='bpytop'" >> "/etc/fish/config.fish"
-echo "alias sss='ssh cloud'" >> "/etc/fish/config.fish"
-echo "alias sss='ssh cloud'" >> "/etc/fish/config.fish"
-echo "alias poof='poweroff'" >> "/etc/fish/config.fish"
+echo "alias sss='ssh 192.168.178.111'" >> "/etc/fish/config.fish"
+echo "alias poof='sudo shutdown -P now'" >> "/etc/fish/config.fish"
 echo "alias 'cd..'='cd ..'" >> "/etc/fish/config.fish"
 echo "alias cp='cp -iv'" >> "/etc/fish/config.fish"
 echo "alias myip='curl ipinfo.io/ip'" >> "/etc/fish/config.fish"
