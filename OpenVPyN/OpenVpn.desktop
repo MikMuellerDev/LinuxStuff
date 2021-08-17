@@ -2,7 +2,7 @@
 Name=Open Vpn
 GenericName=Open vpn
 GenericName[de]=Connect to Openvpn
-Exec=bash /etc/OpenVPyN/launch.sh
+Exec="/etc/OpenVPyN/launch.sh" %u
 Icon=/etc/OpenVPyN/icon.png
 Terminal=true
 Type=Application

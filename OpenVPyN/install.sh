@@ -20,8 +20,8 @@ sudo mv launch.sh /etc/OpenVPyN/
 sudo chmod +x /etc/OpenVPyN/launch.sh
 sudo cp icon.png /etc/OpenVPyN
 # set desktop icon
-cp OpenVpn.desktop /home/$USER/Desktop/
-cd /home/$USER/Desktop/
+cp OpenVpn.desktop /home/$USER/.local/share/applications
+cd /home/$USER/.local/share/applications
 chmod +x OpenVpn.desktop
 echo 'created desktop shortcut'
 echo "Installed OpenVPyN."
