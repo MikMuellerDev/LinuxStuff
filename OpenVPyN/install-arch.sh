@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -S python python-pip openvpn
+sudo pacman -S --noconfirm  python python-pip openvpn
 sudo pip3 install requests tk
 cd /home/$USER/
 git clone https://github.com/MikMuellerDev/LinuxStuff
