@@ -3,11 +3,20 @@
 Openvpn doesn't provide a linux client with GUI, so here is such thing done in python.
 
 
-## Install
+## Install Debian / Ubuntu
 1. Execute the script.
 2. Put your Openvpn profile file into the directory of the main.py python file
 4. If you choose your own .ovpn file, make sure to remove "PROFILETEST.ovpn".
 
 ````
 wget -O- https://raw.githubusercontent.com/MikMuellerDev/LinuxStuff/main/OpenVPyN/install.sh | bash
+````
+
+## Install Arch
+1. Execute the script.
+2. Put your Openvpn profile file into the directory of the main.py python file
+4. If you choose your own .ovpn file, make sure to remove "PROFILETEST.ovpn".
+
+````
+wget -O- https://raw.githubusercontent.com/MikMuellerDev/LinuxStuff/main/OpenVPyN/install-arch.sh | bash
 ````
