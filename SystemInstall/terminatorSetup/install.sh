@@ -31,7 +31,7 @@ echo -e "$(NORMAL 2)..done$(RESET)"
 
 echo -e "$(NORMAL 6)Installing terminator config file$(RESET)"
 mkdir -p ~/.config/terminator || exit 3
-wget -O- https://raw.githubusercontent.com/MikMuellerDev/LinuxStuff/main/terminatorSetup/terminator.conf > ~/.config/terminator/config || exit 3
+wget -O- https://raw.githubusercontent.com/MikMuellerDev/LinuxStuff/main/SystemInstall/terminatorSetup/config > ~/.config/terminator/config || exit 3
 echo -e "$(NORMAL 2)..done$(RESET)"
 
 
